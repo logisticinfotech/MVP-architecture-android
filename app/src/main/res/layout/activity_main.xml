@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    tools:context="mvpdemo.rajnit.com.mvpblogdemo.view.activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:padding="@dimen/_10sdp"
+            android:tint="@color/blue_start"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="Simple Notes"
+            android:textColor="@color/blue_start"
+            android:textSize="@dimen/_16sdp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="82dp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/red_border"
+            android:text="Logout"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginRight="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llHeader"
+        android:layout_margin="@dimen/_8sdp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:hint="Add your notes here..."
+                android:maxLines="5"
+                android:minLines="3"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/green_gradient"
+                android:text="Add Note"
+                android:textAllCaps="false"
+                android:theme="@style/PrimaryButton" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewNote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardAddNote"
+        android:layout_margin="@dimen/_4sdp"
+        tools:listitem="@layout/notes" />
+
+</RelativeLayout>
