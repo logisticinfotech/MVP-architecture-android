@@ -1,15 +1,22 @@
-**What is Android MVP?**
+# What is Android MVP?
+## Introduction
+This demo is based on Android MVP Architecture and how to properly use Android MVP with your great application. 
 
-**Model** :- Model manage data components that provide functionality like fetch, store, sort, and expose data.
+You can find step by step guide from [this blog](https://www.logisticinfotech.com/blog/android-mvp-for-beginners)
 
-**View** :- View manage user interface actions.
+## Model
+Model manage data components that provide functionality like fetch, store, sort, and expose data.
 
-**Presenter** :- Presenter works as an intermediator between View and Model. Presenter accept event from View, analyse action, get required data from Model and send data back to View for update UI.
+## View
+View manage user interface actions.
 
-**Why do we need MVP or any structure?**
+## Presenter
+Presenter works as an intermediator between View and Model. Presenter accept event from View, analyse action, get required data from Model and send data back to View for update UI.
+
+## Why do we need MVP or any structure?
 
 While working with any long-term project, it needs to be scalable, less complicated. MVP makes it possible by dividing code structure into three different layers (MODEL – PRESENTER – VIEW).
 
-**Need to understand MVP Step by Step?**
+## Need to understand MVP Step by Step?
 
 [Follow this blog](https://www.logisticinfotech.com/blog/android-mvp-for-beginners) to understand steps. You will get clear instructions about how this code is developed. 
